@@ -45,7 +45,7 @@ namespace Space_Invader_WPF
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             gameTimer.Start();
 
-            playerSkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/player.png"));
+            playerSkin.ImageSource = new BitmapImage(new Uri("C:/Users/lucas/OneDrive/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/player.png"));
             player.Fill = playerSkin;
 
             myCanvas.Focus();
@@ -62,7 +62,14 @@ namespace Space_Invader_WPF
                 Canvas.SetLeft(player, Canvas.GetLeft(player) + 10);
             }
 
+            bulletTimer -= 3;
 
+            if(bulletTimer < 0)
+            {
+                enemyBulletMaker(Canvas.GetLeft(player)+20,10);
+
+                bulletTimer = bulletTimerLimit;
+            }
 
         }
 
@@ -75,6 +82,23 @@ namespace Space_Invader_WPF
             if (e.Key == Key.Right)
             {
                 goRight = true;
+            }
+            if (e.Key == Key.Space)
+            {
+                Rectangle newBullet = new Rectangle()
+                {
+                    Tag = "bullet",
+                    Height = 20,
+                    Width = 5,
+                    Fill = Brushes.White,
+                    Stroke = Brushes.Red
+                };
+
+                Canvas.SetTop(newBullet, Canvas.GetTop(player)-newBullet.Height);
+                Canvas.SetLeft(newBullet, Canvas.GetLeft(player)+ player.Width/2);
+
+                myCanvas.Children.Add(newBullet);
+
             }
         }
 
@@ -90,9 +114,21 @@ namespace Space_Invader_WPF
             }
         }
 
-        private void ennemyBulletMaker(double x, double y)
+        private void enemyBulletMaker(double x, double y)
         {
+            Rectangle enemyBullet = new Rectangle()
+            {
+                Tag = "enemyBullet",
+                Height = 40,
+                Width = 15,
+                Fill = Brushes.Yellow,
+                Stroke = Brushes.Black,
+                StrokeThickness = 5
+            };
+            Canvas.SetTop(enemyBullet, y);
+            Canvas.SetLeft(enemyBullet, x);
 
+            myCanvas.Children.Add(enemyBullet);
         }
 
         private void makeEnemies(int limit)
