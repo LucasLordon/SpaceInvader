@@ -50,7 +50,7 @@ namespace Space_Invader_WPF
             player.Fill = playerSkin;
 
             myCanvas.Focus();
-            makeEnemies(30);
+            makeEnemies(60);
         }
         private void GameLoop(object sender, EventArgs e)
         {
@@ -67,7 +67,15 @@ namespace Space_Invader_WPF
             }
 
             bulletTimer -= 3;
-
+            if (totalEnemies <= 15)
+            {
+                bulletTimer -= 10;
+            }
+             
+            else if ( totalEnemies <= 30 )
+            {
+                bulletTimer -= 6  ;
+            }
             if (bulletTimer < 0)
             {
                 enemyBulletMaker(Canvas.GetLeft(player) + 20, 10);
@@ -134,15 +142,20 @@ namespace Space_Invader_WPF
             {
                 myCanvas.Children.Remove(i);
             }
-            if (totalEnemies < totalEnemies / 3)
+            if (totalEnemies == 1)
+            {
+                enemySpeed = 30;
+            }
+            else if(totalEnemies <= 10)
+            {
+                enemySpeed = 20;
+            }
+            else if (totalEnemies <= 40)
             {
                 enemySpeed = 12;
             }
-            if (totalEnemies < totalEnemies / 5)
-            {
-                enemySpeed = 18;
-            }
-            if (totalEnemies < 1)
+
+            if (totalEnemies == 0)
             {
                 showGameOver("You win, saved the world");
             }
@@ -156,6 +169,18 @@ namespace Space_Invader_WPF
             if ((e.Key == Key.Right) || (e.Key == Key.D))
             {
                 goRight = true;
+            }
+            
+        }
+        private void KeyIsUp(object sender, KeyEventArgs e)
+        {
+            if ((e.Key == Key.Left)|| (e.Key == Key.A))
+            {
+                goLeft = false;
+            }
+            if ((e.Key == Key.Right)|| (e.Key == Key.D))
+            {
+                goRight = false;
             }
             if (e.Key == Key.Space)
             {
@@ -171,17 +196,6 @@ namespace Space_Invader_WPF
                 Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
 
                 myCanvas.Children.Add(newBullet);
-            }
-        }
-        private void KeyIsUp(object sender, KeyEventArgs e)
-        {
-            if ((e.Key == Key.Left)|| (e.Key == Key.A))
-            {
-                goLeft = false;
-            }
-            if ((e.Key == Key.Right)|| (e.Key == Key.D))
-            {
-                goRight = false;
             }
         }
         private void enemyBulletMaker(double x, double y)
