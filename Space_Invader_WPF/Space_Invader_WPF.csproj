@@ -7,4 +7,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="BackGround.png" />
+    <None Remove="PlayButtonV2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BackGround.png" />
+    <Resource Include="PlayButtonV2.png" />
+  </ItemGroup>
+
 </Project>

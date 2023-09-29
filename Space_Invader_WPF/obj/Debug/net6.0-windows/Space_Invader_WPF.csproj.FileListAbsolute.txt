@@ -40,3 +40,5 @@ C:\Users\lucas\OneDrive\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debu
 C:\Users\lucas\OneDrive\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\Space_Invader_WPF.pdb
 C:\Users\lucas\OneDrive\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\Space_Invader_WPF.genruntimeconfig.cache
 C:\Users\lucas\OneDrive\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\ref\Space_Invader_WPF.dll
+C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\Menu.g.cs
+C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\Menu.baml

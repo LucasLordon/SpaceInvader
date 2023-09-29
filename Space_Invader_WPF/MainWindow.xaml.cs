@@ -27,13 +27,16 @@ namespace Space_Invader_WPF
         bool goLeft, goRight;
 
         List<Rectangle> itemsToRemove = new List<Rectangle>();
-
+        const int MAXBULLET = 90;
         int ennemyImage = 0;
         int bulletTimer = 0;
         int bulletTimerLimit = 90;
         int totalEnemies = 0;
+        int totalBullets = MAXBULLET;
         int enemySpeed = 6;
+        int score=0;
         bool gameOver = false;
+        int bulletFireAutorised = 5;
 
         DispatcherTimer gameTimer = new DispatcherTimer();
         ImageBrush playerSkin = new ImageBrush();
@@ -54,9 +57,11 @@ namespace Space_Invader_WPF
         }
         private void GameLoop(object sender, EventArgs e)
         {
+            bulletFireAutorised++;
             Rect playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width, player.Height);
             enemiesLeft.Content = "Enemies Left : " + totalEnemies;
-
+            bulletsLeft.Content = "Bullets Left : " + totalBullets;
+            scoreSpreader.Content = "Score : " + score;
             if (goLeft == true && Canvas.GetLeft(player) > 10)
             {
                 Canvas.SetLeft(player, Canvas.GetLeft(player) - 10);
@@ -102,6 +107,12 @@ namespace Space_Invader_WPF
                                 itemsToRemove.Add(x);
                                 itemsToRemove.Add(y);
                                 totalEnemies -= 1;
+                                if (totalBullets - totalEnemies > 0)
+                                {
+                                    score = score + (totalBullets - totalEnemies) + MAXBULLET / totalEnemies;
+                                }
+                                else
+                                    score += 10;
                             }
                         }
                     }
@@ -171,7 +182,7 @@ namespace Space_Invader_WPF
                 goRight = true;
             }
             
-        }
+        }  
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
             if ((e.Key == Key.Left)|| (e.Key == Key.A))
@@ -184,18 +195,24 @@ namespace Space_Invader_WPF
             }
             if (e.Key == Key.Space)
             {
-                Rectangle newBullet = new Rectangle()
+                if(totalBullets>0 && bulletFireAutorised>=5)
                 {
-                    Tag = "bullet",
-                    Height = 20,
-                    Width = 5,
-                    Fill = Brushes.White,
-                    Stroke = Brushes.Red
-                };
-                Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
-                Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
+                    Rectangle newBullet = new Rectangle()
+                    {
+                        Tag = "bullet",
+                        Height = 20,
+                        Width = 5,
+                        Fill = Brushes.White,
+                        Stroke = Brushes.Red
+                    };
+                    Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
+                    Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
 
-                myCanvas.Children.Add(newBullet);
+                    myCanvas.Children.Add(newBullet);
+                    totalBullets --;
+                    bulletFireAutorised=0;
+                }
+
             }
         }
         private void enemyBulletMaker(double x, double y)
@@ -230,7 +247,7 @@ namespace Space_Invader_WPF
                     Width = 45,
                     Fill = EnemySkin,
                 };
-                Canvas.SetTop(newEnemy, 10);
+                Canvas.SetTop(newEnemy, 30);
                 Canvas.SetLeft(newEnemy, left);
                 myCanvas.Children.Add(newEnemy);
                 left -= 60;
@@ -275,9 +292,12 @@ namespace Space_Invader_WPF
         }
         private void showGameOver(string messageGameOver)
         {
+            bulletsLeft.Content ="";
+            enemiesLeft.Content = "";
+            scoreSpreader.Content = "";
             gameOver = true;
             gameTimer.Stop();
-            enemiesLeft.Content += "   " + messageGameOver + " press Enter to play again !";
+            enemiesLeft.Content += "   " + messageGameOver +" Voici votre score : "+ score+ "! press Enter to play again !";
         }
     }
 }
