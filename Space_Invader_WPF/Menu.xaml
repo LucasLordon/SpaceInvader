@@ -6,16 +6,21 @@
         xmlns:local="clr-namespace:Space_Invader_WPF"
         mc:Ignorable="d"
         Title="Menu" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="Background" RenderTransformOrigin="0.496,0.541">
         <Grid.Background>
             <ImageBrush ImageSource="/BackGround.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button x:Name="BtnPlay" Content="Open MainWindow"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Height="81" Width="294" Margin="0,102,0,0">
+        <Button x:Name="BtnPlay"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Height="81" Width="294" Margin="0,65,0,0" Foreground="#00000000" ClickMode="Release" Panel.ZIndex="1">
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FFFD0000" Opacity="0"/>
             </Button.BorderBrush>
             <Button.Background>
                 <ImageBrush ImageSource="/PlayButtonV2.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BtnCredit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="86" Width="294" Click="Button_Credit" BorderBrush="#0070706F" Foreground="#00000000">
+            <Button.Background>
+                <ImageBrush ImageSource="/Credit_Button.png"/>
             </Button.Background>
         </Button>
 

@@ -9,12 +9,46 @@
 
   <ItemGroup>
     <None Remove="BackGround.png" />
+    <None Remove="Credit_Button.png" />
+    <None Remove="MenuButton.png" />
     <None Remove="PlayButtonV2.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="BackGround.png" />
+    <Resource Include="Credit_Button.png" />
+    <Resource Include="MenuButton.png" />
     <Resource Include="PlayButtonV2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Image\invader1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\invader2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\invader3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\invader4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\invader5.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\invader6.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\invader7.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\invader8.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image\player.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

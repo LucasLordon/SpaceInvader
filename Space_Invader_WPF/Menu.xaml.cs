@@ -14,14 +14,13 @@ using System.Windows.Shapes;
 
 namespace Space_Invader_WPF
 {
-    /// <summary>
-    /// Logique d'interaction pour Menu.xaml
-    /// </summary>
     public partial class Menu : Window
     {
         public Menu()
         {
             InitializeComponent();
+            Left = 0;
+            Top = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -29,7 +28,13 @@ namespace Space_Invader_WPF
             MainWindow objMainWindow = new MainWindow();
             this.Visibility = Visibility.Hidden;
             objMainWindow.Show();
+        }
 
+        private void Button_Credit(object sender, RoutedEventArgs e)
+        {
+            Credis objCredis = new Credis();
+            this.Visibility = Visibility.Hidden;
+            objCredis.Show();
         }
     }
 }

@@ -44,6 +44,8 @@ namespace Space_Invader_WPF
         public MainWindow()
         {
             InitializeComponent();
+            Left = 0;
+            Top = 0;
 
             gameTimer.Tick += GameLoop;
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
@@ -297,7 +299,7 @@ namespace Space_Invader_WPF
             scoreSpreader.Content = "";
             gameOver = true;
             gameTimer.Stop();
-            enemiesLeft.Content += "   " + messageGameOver +" Voici votre score : "+ score+ "! press Enter to play again !";
+            enemiesLeft.Content += "   " + messageGameOver +" Your score : "+ score+ "! Press Enter to play again !";
         }
     }
 }

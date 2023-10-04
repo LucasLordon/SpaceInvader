@@ -1,8 +1,0 @@
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\bin\Debug\Calculatorr.exe.config
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\bin\Debug\Calculatorr.exe
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\bin\Debug\Calculatorr.pdb
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\obj\Debug\Calculatorr.csproj.AssemblyReference.cache
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\obj\Debug\Calculatorr.csproj.SuggestedBindingRedirects.cache
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\obj\Debug\Calculatorr.csproj.CoreCompileInputs.cache
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\obj\Debug\Calculatorr.exe
-C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Calculatorr\obj\Debug\Calculatorr.pdb

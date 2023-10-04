@@ -1,0 +1,33 @@
+﻿<Window x:Class="Space_Invader_WPF.Credis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Space_Invader_WPF"
+        mc:Ignorable="d"
+        Title="Credis" Height="450" Width="800">
+    <Grid>
+        <Image Source="/BackGround.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,-2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.011"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.041"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Button Name="BtnMenu" HorizontalAlignment="Center" VerticalAlignment="Top" Height="86" Width="294" Click="Button_Click" Margin="0,666,0,0" Panel.ZIndex="1" RenderTransformOrigin="0.49,-3.85" BorderBrush="#00707070" Foreground="#00000000">
+            <Button.Background>
+                <ImageBrush ImageSource="/MenuButton.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="TextCredis" 
+               Content="&#x9;&#x9;**Space Invader**&#xA;&#xA;&#x9;           Créé par Lucas Lordon&#xA;&#xA; Développé par Etml, Ecole Technique des Métiers Lausanne &#xA;&#xD;&#xA;&#x9;&#x9;       **Crédits** &#xA; &#xA;&#x9;&#x9;**Développement**  &#xA;&#xA;&#x9;           - Lucas - Créateur du jeu  &#xA;&#xA;&#x9;&#x9;**Droits d'auteur**  &#xA;&#xA;      © [2023] Etml, Ecole Technique des Métiers Lausanne&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;&#x9;       Merci d'avoir joué à Space Invader ! " 
+               HorizontalAlignment="Center" 
+               Margin="0,429,0,-424" 
+               FontFamily="Cooper Noir" 
+               Width="612" Background="#00FFFFFE" Foreground="#FB208489" FontSize="20"/>
+
+    </Grid>
+</Window>
