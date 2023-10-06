@@ -1,0 +1,11 @@
+1) Introduction
+
+2) Analyse fonctionnelle --> maquette
+
+3) Analyse technique --> Diagramme de classe 
+		     --> Explication (docfx)
+4) Test Unitaire --> 3-4 en tout
+		 --> Rapport de test
+5)ChatGPT --> expliquer les cas d'utilisation
+
+6) Conclusion

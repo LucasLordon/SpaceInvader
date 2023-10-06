@@ -146,3 +146,5 @@ C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\bin\Debug\net6.
 C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\bin\Debug\net6.0-windows\Image\player.png
 C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\Credis.g.cs
 C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\Credis.baml
+C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\PlayMenu.g.cs
+C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\PlayMenu.baml
