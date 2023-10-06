@@ -39,9 +39,6 @@ namespace Space_Invader_WPF
             objCredis.Show();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
     }
 }

@@ -25,7 +25,7 @@ namespace Space_Invader_WPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow objMainWindow = new MainWindow();
+            PlayMenu objMainWindow = new PlayMenu();
             this.Visibility = Visibility.Hidden;
             objMainWindow.Show();
         }

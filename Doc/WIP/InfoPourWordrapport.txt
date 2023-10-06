@@ -2,7 +2,7 @@
 
 2) Analyse fonctionnelle --> maquette
 
-3) Analyse technique --> Diagramme de classe 
+3) Analyse technique --> Diagramme de classe --> visual studio instaleur --> modifier --> composant individuel --> outis de code --> ajouter concepteur de classe
 		     --> Explication (docfx)
 4) Test Unitaire --> 3-4 en tout
 		 --> Rapport de test

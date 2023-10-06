@@ -8,6 +8,31 @@
         Title="PlayMenu" Height="450" Width="800">
     <Grid>
         <Image Source="/BackGround.png" Stretch="Fill" Height="438" VerticalAlignment="Center"/>
+        <Button x:Name="btnSolo" HorizontalAlignment="Left" Margin="55,50,0,0" VerticalAlignment="Top" Height="88" Width="230" BorderBrush="#00707070" Click="btnSolo_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/SoloButton.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnMulti" HorizontalAlignment="Left" Margin="524,50,0,0" VerticalAlignment="Top" Height="88" Width="230" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="/MultiButton.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnMenu" HorizontalAlignment="Left" Margin="524,0,0,0" VerticalAlignment="Center" Height="88" Width="230" RenderTransformOrigin="0.827,0.495" BorderBrush="#00707070" Click="btnMenu_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/MenuButton.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnShop" HorizontalAlignment="Left" Margin="55,0,0,0" VerticalAlignment="Center" Height="88" Width="230" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="/ShopButton.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnScore" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Width="250" Height="88" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="/ScoreButton.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

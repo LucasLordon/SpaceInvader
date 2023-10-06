@@ -11,14 +11,22 @@
     <None Remove="BackGround.png" />
     <None Remove="Credit_Button.png" />
     <None Remove="MenuButton.png" />
+    <None Remove="MultiButton.png" />
     <None Remove="PlayButtonV2.png" />
+    <None Remove="ScoreButton.png" />
+    <None Remove="ShopButton.png" />
+    <None Remove="SoloButton.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="BackGround.png" />
     <Resource Include="Credit_Button.png" />
     <Resource Include="MenuButton.png" />
+    <Resource Include="MultiButton.png" />
     <Resource Include="PlayButtonV2.png" />
+    <Resource Include="ScoreButton.png" />
+    <Resource Include="ShopButton.png" />
+    <Resource Include="SoloButton.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,6 +10,9 @@
     <Compile Update="Credis.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="GameOver.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Menu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Credis.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GameOver.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
