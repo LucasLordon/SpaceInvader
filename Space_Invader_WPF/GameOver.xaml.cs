@@ -26,5 +26,12 @@ namespace Space_Invader_WPF
             Left = 0;
             Top = 0;
         }
+
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            PlayMenu objMainWindow = new PlayMenu();
+            this.Visibility = Visibility.Hidden;
+            objMainWindow.Show();
+        }
     }
 }
