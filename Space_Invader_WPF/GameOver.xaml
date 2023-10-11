@@ -9,6 +9,7 @@
     <Grid>
         <Image Source="/BackGround.png" Stretch="Fill" Margin="0,0,0,-2"/>
         <Label x:Name="Title" Content="Game Over" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="280" Foreground="#FB208489" FontFamily="Cooper Black" FontSize="48" RenderTransformOrigin="0.504,0.231"/>
+        <Label Name="gameOverScore" Foreground="White" FontSize="16" FontWeight="ExtraBold" Margin="237,124,237,187" HorizontalContentAlignment="Center">Score</Label>
 
     </Grid>
 </Window>

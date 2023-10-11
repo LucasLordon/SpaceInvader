@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\App.xaml
-41359875419
+5380383313
 
-61454186053
+7-858981281
 1942007414746
-Credis.xaml;MainWindow.xaml;Menu.xaml;PlayMenu.xaml;
+Credis.xaml;GameOver.xaml;MainWindow.xaml;Menu.xaml;PlayMenu.xaml;
 
 False
 

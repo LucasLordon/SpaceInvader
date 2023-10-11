@@ -21,7 +21,10 @@ namespace Space_Invader_WPF
     {
         public GameOver()
         {
+            gameOverScore = this.gameOverScore;
             InitializeComponent();
+            Left = 0;
+            Top = 0;
         }
     }
 }

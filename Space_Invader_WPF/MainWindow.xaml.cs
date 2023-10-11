@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 using System.Windows.Threading;
 
 namespace Space_Invader_WPF
@@ -34,7 +33,7 @@ namespace Space_Invader_WPF
         int totalEnemies = 0;
         int totalBullets = MAXBULLET;
         int enemySpeed = 6;
-        int score=0;
+        int score = 0;
         bool gameOver = false;
         int bulletFireAutorised = 5;
 
@@ -78,10 +77,10 @@ namespace Space_Invader_WPF
             {
                 bulletTimer -= 10;
             }
-             
-            else if ( totalEnemies <= 30 )
+
+            else if (totalEnemies <= 30)
             {
-                bulletTimer -= 6  ;
+                bulletTimer -= 6;
             }
             if (bulletTimer < 0)
             {
@@ -159,7 +158,7 @@ namespace Space_Invader_WPF
             {
                 enemySpeed = 30;
             }
-            else if(totalEnemies <= 10)
+            else if (totalEnemies <= 10)
             {
                 enemySpeed = 20;
             }
@@ -183,21 +182,21 @@ namespace Space_Invader_WPF
             {
                 goRight = true;
             }
-            
-        }  
+
+        }
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
-            if ((e.Key == Key.Left)|| (e.Key == Key.A))
+            if ((e.Key == Key.Left) || (e.Key == Key.A))
             {
                 goLeft = false;
             }
-            if ((e.Key == Key.Right)|| (e.Key == Key.D))
+            if ((e.Key == Key.Right) || (e.Key == Key.D))
             {
                 goRight = false;
             }
             if (e.Key == Key.Space)
             {
-                if(totalBullets>0 && bulletFireAutorised>=5)
+                if (totalBullets > 0 && bulletFireAutorised >= 5)
                 {
                     Rectangle newBullet = new Rectangle()
                     {
@@ -211,8 +210,8 @@ namespace Space_Invader_WPF
                     Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
 
                     myCanvas.Children.Add(newBullet);
-                    totalBullets --;
-                    bulletFireAutorised=0;
+                    totalBullets--;
+                    bulletFireAutorised = 0;
                 }
 
             }
@@ -260,46 +259,66 @@ namespace Space_Invader_WPF
                 {
                     ennemyImage = 1;
                 }
-
+                string cheminRelatif;
+                string cheminAbsolu;
                 switch (ennemyImage)
                 {
                     case 1:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader1.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader1.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
+
                         break;
                     case 2:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader2.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader2.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
                         break;
                     case 3:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader3.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader3.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
                         break;
                     case 4:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader4.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader4.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
                         break;
                     case 5:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader5.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader5.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
                         break;
                     case 6:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader6.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader6.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
                         break;
                     case 7:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader7.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader7.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
                         break;
                     case 8:
-                        EnemySkin.ImageSource = new BitmapImage(new Uri("C:/Users/pu61qgw/Documents/GitHub/SpaceInvader/Space_Invader_WPF/Image/invader8.gif"));
+                        cheminRelatif = "../net6.0-windows/Image/invader8.gif";
+                        cheminAbsolu = System.IO.Path.GetFullPath(cheminRelatif);
+                        EnemySkin.ImageSource = new BitmapImage(new Uri(cheminAbsolu));
                         break;
-
                 }
-
             }
         }
         private void showGameOver(string messageGameOver)
         {
-            bulletsLeft.Content ="";
-            enemiesLeft.Content = "";
-            scoreSpreader.Content = "";
+            //GameOver objGameOver = new GameOver();
+            this.Visibility = Visibility.Hidden;
+
+
             gameOver = true;
             gameTimer.Stop();
-            enemiesLeft.Content += "   " + messageGameOver +" Your score : "+ score+ "! Press Enter to play again !";
+            GameOver gameOverWindow = new GameOver(); // Créez une instance de la fenêtre GameOver
+            gameOverWindow.gameOverScore.Content = "Voici votre score : "+ score+"\nEnnemy restant : "+ totalEnemies+ "\nMunition restantes : "+ totalBullets;
+            gameOverWindow.ShowDialog(); // Affichez la fenêtre de manière modale
+
         }
     }
 }
