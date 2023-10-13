@@ -36,6 +36,7 @@ namespace Space_Invader_WPF
         int score = 0;
         bool gameOver = false;
         int bulletFireAutorised = 5;
+        int MAXENNEMI = 60;
 
         DispatcherTimer gameTimer = new DispatcherTimer();
         ImageBrush playerSkin = new ImageBrush();
@@ -54,7 +55,7 @@ namespace Space_Invader_WPF
             player.Fill = playerSkin;
 
             myCanvas.Focus();
-            makeEnemies(60);
+            makeEnemies(MAXENNEMI);
         }
         private void GameLoop(object sender, EventArgs e)
         {
@@ -110,7 +111,7 @@ namespace Space_Invader_WPF
                                 totalEnemies -= 1;
                                 if (totalBullets - totalEnemies > 0)
                                 {
-                                    score = score + (totalBullets - totalEnemies) + MAXBULLET / totalEnemies;
+                                    score = score + (totalBullets - totalEnemies) + MAXBULLET / (totalEnemies+1);
                                 }
                                 else
                                     score += 10;
@@ -312,11 +313,12 @@ namespace Space_Invader_WPF
             //GameOver objGameOver = new GameOver();
             this.Visibility = Visibility.Hidden;
 
-
+            float ratio;
+            ratio= (MAXENNEMI-totalEnemies)/(MAXBULLET-totalBullets);
             gameOver = true;
             gameTimer.Stop();
             GameOver gameOverWindow = new GameOver(); // Créez une instance de la fenêtre GameOver
-            gameOverWindow.gameOverScore.Content = "Voici votre score : "+ score+"\nEnnemy restant : "+ totalEnemies+ "\nMunition restantes : "+ totalBullets;
+            gameOverWindow.gameOverScore.Content = "Voici votre score : "+ score+"\nEnnemy restant : "+ totalEnemies+ "\nMunition restantes : "+ totalBullets+"\nRation (tir/mort) : "+ ratio;
             gameOverWindow.ShowDialog(); // Affichez la fenêtre de manière modale
 
         }
