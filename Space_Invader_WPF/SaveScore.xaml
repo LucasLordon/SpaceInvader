@@ -1,0 +1,22 @@
+﻿<Window x:Class="Space_Invader_WPF.SaveScore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Space_Invader_WPF"
+        mc:Ignorable="d"
+        Title="SaveScore" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <ImageBrush ImageSource="/BackGround.png"/>
+        </Grid.Background>
+        <Label Content="Enter your pseudo :" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxPseudo" HorizontalAlignment="Center" Margin="0,172,0,0" Text="~pseudo~" VerticalAlignment="Top" Width="120" Background="#FF2FB79C" IsEnabled="True" TextAlignment="Center" TextWrapping="Wrap" BorderBrush="#FFAEA9BA"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Click="btnSave_Click" Background="#FF2FB79C"/>
+        <Button x:Name="btnMenu" HorizontalAlignment="Center" VerticalAlignment="Top" Height="79" Width="244" Click="btnMenu_Click" BorderBrush="Transparent" Foreground="Transparent" Margin="0,281,0,0" RenderTransformOrigin="0.499,-0.156">
+            <Button.Background>
+                <ImageBrush ImageSource="/MenuButton.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
+
 namespace Space_Invader_WPF
 {
     /// <summary>
@@ -19,6 +21,7 @@ namespace Space_Invader_WPF
     /// </summary>
     public partial class GameOver : Window
     {
+        public int score;
         public GameOver()
         {
             gameOverScore = this.gameOverScore;
@@ -33,17 +36,13 @@ namespace Space_Invader_WPF
             this.Visibility = Visibility.Hidden;
             objMainWindow.Show();
         }
-        private void btnMenu_MouseEnter(object sender, MouseEventArgs e)
-        {
-            // Changez l'image du bouton lorsque la souris passe dessus
-            imageBtnMenu.Source = new BitmapImage(new Uri("/MenuButtonWhite.png", UriKind.Relative));
-        }
 
-        private void btnMenu_MouseLeave(object sender, MouseEventArgs e)
+        private void btnSaveScore_Click(object sender, RoutedEventArgs e)
         {
-            // Revenez à l'image d'origine lorsque la souris s'en va
-            imageBtnMenu.Source = new BitmapImage(new Uri("/MenuButton.png", UriKind.Relative));
+            SaveScore objMainWindow = new SaveScore();
+            this.Visibility = Visibility.Hidden;
+            objMainWindow.Show();
+            objMainWindow.score = score;
         }
-
     }
 }

@@ -13,10 +13,16 @@
     <Compile Update="GameOver.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="highScore.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Menu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PlayMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SaveScore.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,6 +33,9 @@
     <Page Update="GameOver.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="highScore.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PlayMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SaveScore.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

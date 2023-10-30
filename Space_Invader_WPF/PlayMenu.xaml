@@ -28,7 +28,7 @@
                 <ImageBrush ImageSource="/ShopButton.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnScore" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Width="250" Height="88" BorderBrush="#00707070">
+        <Button x:Name="btnScore" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Width="250" Height="88" BorderBrush="#00707070" Click="btnScore_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/ScoreButton.png"/>
             </Button.Background>

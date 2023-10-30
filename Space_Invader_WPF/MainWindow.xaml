@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Space Invader Game" Height="500" Width="800">
     <Canvas Name="myCanvas" Focusable="True" Background="Black" KeyDown="KeyIsDown" KeyUp="KeyIsUp">
-        <Label Name="enemiesLeft" Foreground="White" FontSize="16" FontWeight="ExtraBold">Enemies Left : 0</Label>
+        <Label Name="alienLeft" Foreground="White" FontSize="16" FontWeight="ExtraBold">Alien Left : 0</Label>
         <Label Name="bulletsLeft" Foreground="White" FontSize="16" FontWeight="ExtraBold" HorizontalAlignment="Left" Canvas.Left="589" VerticalAlignment="Center">Bullets left : 0</Label>
         <Label Name="scoreSpreader" Foreground="White" FontSize="16" FontWeight="ExtraBold" HorizontalAlignment="Left" Canvas.Left="362" VerticalAlignment="Center">Score : 0</Label>
-        <Rectangle Name="player" Fill="White" Height="48" Width="28" Canvas.Left="386" Canvas.Top="406" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.791,0.541"/>
+        
     </Canvas>
 </Window>

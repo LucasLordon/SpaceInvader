@@ -6,15 +6,22 @@
         xmlns:local="clr-namespace:Space_Invader_WPF"
         mc:Ignorable="d"
         Title="GameOver" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="btnSaveScore2">
         <Image Source="/BackGround.png" Stretch="Fill" Margin="0,0,0,-2"/>
         <Label x:Name="Title" Content="Game Over" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="280" Foreground="#FB208489" FontFamily="Cooper Black" FontSize="48" RenderTransformOrigin="0.504,0.231"/>
-        <Label Name="gameOverScore" Foreground="White" FontSize="16" FontWeight="ExtraBold" Margin="237,124,237,187" HorizontalContentAlignment="Center">Score</Label>
-        <Button x:Name="btnMenu" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Height="105" Width="326" RenderTransformOrigin="0.827,0.495" BorderBrush="Transparent" Background="Transparent" Click="btnMenu_Click" MouseEnter="btnMenu_MouseEnter" MouseLeave="btnMenu_MouseLeave">
-            <Button.Content>
-                <Image x:Name="imageBtnMenu" Source="/MenuButton.png" MouseEnter="btnMenu_MouseEnter" MouseLeave="btnMenu_MouseLeave"/>
-            </Button.Content>
+        <Label Name="gameOverScore" Foreground="White" FontSize="16" FontWeight="ExtraBold" Margin="237,63,237,248" HorizontalContentAlignment="Center">Score</Label>
+        <Button x:Name="btnMenu" HorizontalAlignment="Center" VerticalAlignment="Top" Height="79" Width="244" Click="btnMenu_Click" BorderBrush="Transparent" Foreground="Transparent" Margin="0,322,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/MenuButton.png"/>
+            </Button.Background>
         </Button>
+        <Button x:Name="btnSaveScore"  HorizontalAlignment="Center" Margin="0,238,0,0" VerticalAlignment="Top" Height="79" Width="244" Click="btnSaveScore_Click" RenderTransformOrigin="0.421,0.696" BorderBrush="Transparent" Foreground="Transparent">
+            <Button.Background>
+                <ImageBrush ImageSource="/SaveScoreButton.png"/>
+            </Button.Background>
+        </Button>
+
+
 
 
 

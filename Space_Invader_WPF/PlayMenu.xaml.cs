@@ -38,5 +38,11 @@ namespace Space_Invader_WPF
             this.Visibility = Visibility.Hidden;
             objCredis.Show();
         }
+        private void btnScore_Click(object sender, RoutedEventArgs e)
+        {
+            highScore objCredis = new highScore();
+            this.Visibility = Visibility.Hidden;
+            objCredis.Show();
+        }
     }
 }

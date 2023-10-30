@@ -1,17 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {}
+    "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {
+    "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Model\\Model.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Model\\Model.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
+        "projectUniqueName": "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
         "projectName": "Space_Invader_WPF",
-        "projectPath": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
+        "projectPath": "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
         "packagesPath": "C:\\Users\\pu61qgw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\obj\\",
+        "outputPath": "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Space_Invader_WPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,7 +45,11 @@
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\pu61qgw\\Desktop\\CodeV2LLSpaceInvadersHome\\SpaceInvader\\Model\\Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -42,6 +61,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
