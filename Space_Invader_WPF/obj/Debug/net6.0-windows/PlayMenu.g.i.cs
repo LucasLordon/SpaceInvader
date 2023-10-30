@@ -93,7 +93,7 @@ namespace Space_Invader_WPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Space_Invader_WPF;V1.0.0.0;component/playmenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Space_Invader_WPF;component/playmenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PlayMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

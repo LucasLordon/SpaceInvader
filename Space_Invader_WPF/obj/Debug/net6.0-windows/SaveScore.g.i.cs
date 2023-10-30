@@ -77,7 +77,7 @@ namespace Space_Invader_WPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Space_Invader_WPF;V1.0.0.0;component/savescore.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Space_Invader_WPF;component/savescore.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SaveScore.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
