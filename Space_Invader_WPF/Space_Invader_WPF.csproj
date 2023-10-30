@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="BackGround.png" />
     <None Remove="Credit_Button.png" />
+    <None Remove="highScore.png" />
     <None Remove="MenuButton.png" />
     <None Remove="MultiButton.png" />
     <None Remove="PlayButtonV2.png" />
@@ -30,6 +31,7 @@
   <ItemGroup>
     <Resource Include="BackGround.png" />
     <Resource Include="Credit_Button.png" />
+    <Resource Include="highScore.png" />
     <Resource Include="MenuButton.png" />
     <Resource Include="MultiButton.png" />
     <Resource Include="PlayButtonV2.png" />

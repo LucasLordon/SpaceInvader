@@ -45,7 +45,7 @@ namespace Space_Invader_WPF
         {
             List<ScoreData> topPlayers = new List<ScoreData>();
 
-            string connectionstring = "server=localhost; uid=root; pwd=4$a6mJ#ieQ95&MK9LF$R; database=db_space_invaders;";
+            string connectionstring = "server=localhost; uid=root; pwd=root; database=db_space_invaders; port=6033;";
             using (MySqlConnection con = new MySqlConnection(connectionstring))
             {
                 con.Open();

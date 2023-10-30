@@ -23,7 +23,7 @@ namespace Space_Invader_WPF
 {
     public partial class MainWindow : Window
     {
-        const int STARTAMMOSTOCK = 90;
+        const int STARTAMMOSTOCK = 80;
         const int STARTALIENNUMBER = 60;
         const int ALIENWIDTH = 45;
         const int ALIENHEIGHT = 45;
@@ -364,7 +364,7 @@ namespace Space_Invader_WPF
             gameTimer.Stop();
             GameOver gameOverWindow = new GameOver(); 
             gameOverWindow.score = score;
-            gameOverWindow.gameOverScore.Content = "Voici votre score : " + score + "\nEnnemy restant : " + aliensLeft + "\nMunition restantes : " + bulletLeft + "\nRation (tir/mort) : " + ratio; gameOverWindow.ShowDialog();
+            gameOverWindow.gameOverScore.Content = "Voici votre score : " + score + "\nEnnemy restant : " + aliensLeft + "\nMunition restantes : " + bulletLeft + "\nRatio (tir/mort) : " + ratio; gameOverWindow.ShowDialog();
             
         }
         public static bool IsAnIntersection(int X1, int Y1, int W1, int H1, int X2, int Y2, int W2, int H2)
@@ -407,10 +407,14 @@ namespace Space_Invader_WPF
                         myCanvas.Children.Remove(bulletPair.NewBullet);
                         aliens.Remove(alienPair);
                         myCanvas.Children.Remove(alienPair.NewAlien);
-                        aliensLeft--;
+                        if(aliensLeft!=0)
+                        {
+                         aliensLeft--;
+                        }
+                        
                         if (bulletLeft - aliensLeft > 0)
                         {
-                            score = 1000+score + (bulletLeft - aliensLeft) + STARTAMMOSTOCK / (aliensLeft + 3);
+                            score = score + (bulletLeft - aliensLeft) + STARTAMMOSTOCK;
                         }
                         else
                             score += 10;

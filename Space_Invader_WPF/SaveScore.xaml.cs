@@ -32,7 +32,7 @@ namespace Space_Invader_WPF
             if (!isQueryExecuted)
             {
                 string player = TextBoxPseudo.Text;
-                string connstring = "server=localhost; uid=root; pwd=4$a6mJ#ieQ95&MK9LF$R; database=db_space_invaders;";
+                string connstring = "server=localhost; uid=root; pwd=root; database=db_space_invaders; port=6033;";
                 MySqlConnection con = new MySqlConnection(connstring);
 
                 try

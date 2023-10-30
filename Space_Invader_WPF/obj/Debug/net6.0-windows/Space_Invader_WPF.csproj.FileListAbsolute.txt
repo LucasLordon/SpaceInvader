@@ -279,3 +279,4 @@ C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.
 C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\highScore.baml
 C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\SaveScore.baml
 C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\obj\Debug\net6.0-windows\Space_Invader_WPF.csproj.CopyComplete
+C:\Users\pu61qgw\Documents\GitHub\SpaceInvader\Space_Invader_WPF\bin\Debug\net6.0-windows\Model.dll.config
