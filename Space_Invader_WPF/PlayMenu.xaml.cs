@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Space_Invader_WPF
 {
-    /// <summary>
-    /// Logique d'interaction pour PlayMenu.xaml
-    /// </summary>
     public partial class PlayMenu : Window
     {
         public PlayMenu()

@@ -43,7 +43,7 @@ namespace Space_Invader_WPF
         int AlienBulletFireDelay = 10;
         int AlienBulletFireSpeed = 5;
 
-        bool gameOver = false; // Initialisation de la variable gameOver à false
+        bool gameOver = false;
 
         string messageGameOver = "";
 
@@ -362,9 +362,9 @@ namespace Space_Invader_WPF
             ratio = (float)Math.Round(((float)(STARTALIENNUMBER - aliensLeft) / (float)((STARTAMMOSTOCK + 1) - bulletLeft)), 2);
             gameOver = true;
             gameTimer.Stop();
-            GameOver gameOverWindow = new GameOver(); // Créez une instance de la fenêtre GameOver
+            GameOver gameOverWindow = new GameOver(); 
             gameOverWindow.score = score;
-            gameOverWindow.gameOverScore.Content = "Voici votre score : " + score + "\nEnnemy restant : " + aliensLeft + "\nMunition restantes : " + bulletLeft + "\nRation (tir/mort) : " + ratio; gameOverWindow.ShowDialog(); // Affichez la fenêtre de manière modale
+            gameOverWindow.gameOverScore.Content = "Voici votre score : " + score + "\nEnnemy restant : " + aliensLeft + "\nMunition restantes : " + bulletLeft + "\nRation (tir/mort) : " + ratio; gameOverWindow.ShowDialog();
             
         }
         public static bool IsAnIntersection(int X1, int Y1, int W1, int H1, int X2, int Y2, int W2, int H2)
@@ -375,7 +375,7 @@ namespace Space_Invader_WPF
         {
 
 
-            // Créer des copies des listes
+
             List<BulletPair> bulletsCopy = new List<BulletPair>(bullets);
             List<AlienBulletPair> alienBulletsCopy = new List<AlienBulletPair>(alienBullets);
             List<AlienPair> aliensCopy = new List<AlienPair>(aliens);
@@ -387,7 +387,7 @@ namespace Space_Invader_WPF
                     if (IsAnIntersection(bulletPair.Bullet.posX, bulletPair.Bullet.posY, bulletPair.Bullet.width, bulletPair.Bullet.height,
                        alienBulletPair.AlienBullet.posX, alienBulletPair.AlienBullet.posY, alienBulletPair.AlienBullet.width, alienBulletPair.AlienBullet.height))
                     {
-                        // Intersection entre Bullet et AlienBullet
+                        
                         bullets.Remove(bulletPair);
                         myCanvas.Children.Remove(bulletPair.NewBullet);
                         alienBullets.Remove(alienBulletPair);
@@ -402,7 +402,7 @@ namespace Space_Invader_WPF
                     if (IsAnIntersection(bulletPair.Bullet.posX, bulletPair.Bullet.posY, bulletPair.Bullet.width, bulletPair.Bullet.height,
                         alienPair.Alien.posX, alienPair.Alien.posY, alienPair.Alien.width, alienPair.Alien.height))
                     {
-                        // Intersection entre Bullet et Alien
+                        
                         bullets.Remove(bulletPair);
                         myCanvas.Children.Remove(bulletPair.NewBullet);
                         aliens.Remove(alienPair);
@@ -422,7 +422,7 @@ namespace Space_Invader_WPF
                 if (IsAnIntersection(player.posX, player.posY, player.width, player.height,
                     alienBulletPair.AlienBullet.posX, alienBulletPair.AlienBullet.posY, alienBulletPair.AlienBullet.width, alienBulletPair.AlienBullet.height))
                 {
-                    // Intersection entre AlienBullet et Player
+                   
                     messageGameOver = "Tu est mort par un tir alien.";
                     gameOver = true;
                     alienBullets.Remove(alienBulletPair);

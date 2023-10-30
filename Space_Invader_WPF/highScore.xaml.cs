@@ -25,8 +25,8 @@ namespace Space_Invader_WPF
             InitializeComponent();
             Left = 0;
             Top = 0;
-            List<ScoreData> topPlayers = GetTop10Players(); // Obtenez les données des meilleurs joueurs.
-            UpdateLabels(topPlayers); // Mettez à jour les labels avec les données.
+            List<ScoreData> topPlayers = GetTop10Players();
+            UpdateLabels(topPlayers);
         }
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
@@ -45,8 +45,8 @@ namespace Space_Invader_WPF
         {
             List<ScoreData> topPlayers = new List<ScoreData>();
 
-            string connstring = "server=localhost; uid=root; pwd=4$a6mJ#ieQ95&MK9LF$R; database=db_space_invaders;";
-            using (MySqlConnection con = new MySqlConnection(connstring))
+            string connectionstring = "server=localhost; uid=root; pwd=4$a6mJ#ieQ95&MK9LF$R; database=db_space_invaders;";
+            using (MySqlConnection con = new MySqlConnection(connectionstring))
             {
                 con.Open();
                 string sql = "SELECT jouPseudo, jouNombrePoints FROM db_space_invaders.t_joueur ORDER BY jouNombrePoints DESC LIMIT 10";

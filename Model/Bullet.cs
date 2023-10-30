@@ -8,26 +8,29 @@ namespace Model
 {
     public class Bullet
     {
-        public int posX;
-        public int posY;
-        public int height;
-        public int width;
-        public int speed;
-        public string fillColor;
-        public string strokeColor;
-        public bool needToDelete=false;
+        // Déclaration des attributs de la classe Bullet
+        public int posX;         // Position en X de la balle
+        public int posY;         // Position en Y de la balle
+        public int height;       // Hauteur de la balle (rectangle)
+        public int width;        // Largeur de la balle (rectangle)
+        public int speed;        // Vitesse de la balle
+        public string fillColor; // Couleur du centre de la balle
+        public string strokeColor; // Couleur des bordures de la balle
+        public bool needToDelete = false; // Un indicateur pour indiquer si la balle doit être supprimée
 
         /// <summary>
-        /// Constructeur de la class "Bullet"
+        /// Constructeur de la classe "Bullet"
         /// </summary>
         /// <param name="posX">position x</param>
         /// <param name="posY">position y</param>
-        /// <param name="height">hauteur du bullet (car le bullet et un rectangle)</param>
-        /// <param name="width">largeur du bullet (car le bullet et un rectangle)</param>
-        /// <param name="fillColor">couleur du centre du bullet</param>
-        /// <param name="strokeColor">couleur des bordures du bullet</param>
-        public Bullet(int posX, int posY,int height, int width,int speed, string fillColor, string strokeColor )
+        /// <param name="height">hauteur de la balle (rectangle)</param>
+        /// <param name="width">largeur de la balle (rectangle)</param>
+        /// <param name="speed">vitesse de la balle</param>
+        /// <param name="fillColor">couleur du centre de la balle</param>
+        /// <param name="strokeColor">couleur des bordures de la balle</param>
+        public Bullet(int posX, int posY, int height, int width, int speed, string fillColor, string strokeColor)
         {
+            // Initialisation des attributs avec les valeurs passées en paramètres
             this.posX = posX;
             this.posY = posY;
             this.height = height;
@@ -35,25 +38,30 @@ namespace Model
             this.speed = speed;
             this.fillColor = fillColor;
             this.strokeColor = strokeColor;
-            
         }
+
+        // Méthode pour faire apparaître la balle en fonction de la position du joueur
         public void Spawn(Player player)
         {
-            this.posX = player.posX+player.width/2-this.width/2;
-            this.posY = player.posY+this.height;
+            this.posX = player.posX + player.width / 2 - this.width / 2;
+            this.posY = player.posY + this.height;
         }
+
+        // Méthode pour déplacer la balle vers le haut
         public void MoveUp(int TOPLIMIT)
         {
             this.posY -= this.speed;
-            if(this.posY < TOPLIMIT)
+            if (this.posY < TOPLIMIT)
             {
-                this.needToDelete =true;
+                this.needToDelete = true;
             }
         }
-        public void MoveDown(int WINDOWSHEIGT)
+
+        // Méthode pour déplacer la balle vers le bas
+        public void MoveDown(int WINDOWSHEIGHT)
         {
             this.posY += this.speed;
-            if (this.posY > WINDOWSHEIGT)
+            if (this.posY > WINDOWSHEIGHT)
             {
                 this.needToDelete = true;
             }

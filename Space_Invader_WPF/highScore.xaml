@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="highScore" Height="450" Width="800">
     <Grid Background="#FF494454">
-        <Image Margin="204,10,204,94" Source="/Image/highScore.png" Stretch="Fill"></Image>
+        <Image Margin="204,10,204,94" Source="/highScore.png" Stretch="Fill"></Image>
+        
         <Label x:Name="Title" Content="Best of All" HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top" Width="198" Foreground="#E2EB17" FontFamily="Cooper Black" FontSize="36" RenderTransformOrigin="0.504,0.231"/>
         <Label x:Name="Rank" Content="Rank" HorizontalAlignment="Left" Margin="246,66,0,0" VerticalAlignment="Top" Width="55" Foreground="#E2EB17" FontFamily="Cooper Black" FontSize="16" RenderTransformOrigin="0.504,0.231"/>
         <Label x:Name="Score" Content="Score" HorizontalAlignment="Center" Margin="0,66,0,0" VerticalAlignment="Top" Width="56" Foreground="#E2EB17" FontFamily="Cooper Black" FontSize="16" RenderTransformOrigin="0.504,0.231"/>
