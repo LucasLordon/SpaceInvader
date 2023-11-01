@@ -69,7 +69,7 @@ namespace Space_Invader_WPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Space_Invader_WPF;component/credis.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Space_Invader_WPF;V1.0.0.0;component/credis.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Credis.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

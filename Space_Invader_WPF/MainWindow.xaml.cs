@@ -208,7 +208,7 @@ namespace Space_Invader_WPF
             }
 
         }
-        private void makeAlienBullet(Bullet alienBullet)
+        public void makeAlienBullet(Bullet alienBullet)
         {
             Rectangle newAlienBullet = new Rectangle()
             {
@@ -231,14 +231,14 @@ namespace Space_Invader_WPF
 
             alienBulletPairs.Add(alienBulletPair);
         }
-        private void updateAlienBullets()
+        public void updateAlienBullets()
         {
             foreach (AlienBulletPair alienBulletPair in alienBulletPairs)
             {
                 updateAlienBullet(alienBulletPair.AlienBullet, alienBulletPair.NewAlienBullet);
             }
         }
-        private void updateAlienBullet(Bullet alienBullet, Rectangle newAlienBullet)
+        public void updateAlienBullet(Bullet alienBullet, Rectangle newAlienBullet)
         {
 
             if (alienBullet.needToDelete == false)
@@ -251,12 +251,12 @@ namespace Space_Invader_WPF
                 myCanvas.Children.Remove(newAlienBullet);
             }
         }
-        private void drawAlienBullet(Bullet alienBullet, Rectangle newAlienBullet)
+        public void drawAlienBullet(Bullet alienBullet, Rectangle newAlienBullet)
         {
             Canvas.SetTop(newAlienBullet, alienBullet.posY);
             Canvas.SetLeft(newAlienBullet, alienBullet.posX);
         }
-        private void createAlien(int ALIENNUMBER)
+        public void createAlien(int ALIENNUMBER)
         {
             int AlienType = 1;
             int Space = 0;
@@ -299,7 +299,7 @@ namespace Space_Invader_WPF
                     AlienType++;
             }
         }
-        private void makeAlien(Alien alien)
+        public void makeAlien(Alien alien)
         {
             string cheminRelatif;
             string cheminAbsolu;
@@ -331,24 +331,24 @@ namespace Space_Invader_WPF
             };
             alienPairs.Add(alienPair);
         }
-        private void updateAliens()
+        public void updateAliens()
         {
             foreach (AlienPair alienPair in alienPairs)
             {
                 updateAlien(alienPair.Alien, alienPair.NewAlien);
             }
         }
-        private void updateAlien(Alien alien, Rectangle newAlien)
+        public void updateAlien(Alien alien, Rectangle newAlien)
         {
             alien.move(WINDOWSWIDTH);
             drawAlien(alien, newAlien);
         }
-        private void drawAlien(Alien alien, Rectangle newAlien)
+        public void drawAlien(Alien alien, Rectangle newAlien)
         {
             Canvas.SetTop(newAlien, alien.posY);
             Canvas.SetLeft(newAlien, alien.posX);
         }
-        private void checkGameOver()
+        public void checkGameOver()
         {
             if (gameOver == true)
             {
@@ -446,13 +446,13 @@ namespace Space_Invader_WPF
             }
             return gameOver;
         }
-        private void ScreenUpdate()
+        public void ScreenUpdate()
         {
             alienLeft.Content = "Alien Left : " + aliensLeft;
             bulletsLeft.Content = "Bullets Left : " + bulletLeft;
             scoreSpreader.Content = "Score : " + score;
         }
-        private void progressiveDifficulty()
+        public void progressiveDifficulty()
         {
             if (aliensLeft <= 50)
             {
@@ -506,7 +506,7 @@ namespace Space_Invader_WPF
             increasAlienSpeed(alienSpeed, alienPairs);
 
         }
-        private void increasAlienSpeed(int speed, List<AlienPair> aliens)
+        public void increasAlienSpeed(int speed, List<AlienPair> aliens)
         {
             List<AlienPair> aliensCopy = new List<AlienPair>(aliens);
 
@@ -526,7 +526,7 @@ namespace Space_Invader_WPF
             public Bullet AlienBullet { get; set; }
             public Rectangle NewAlienBullet { get; set; }
         }
-        public class AlienPair
+public class AlienPair
         {
             public Alien Alien { get; set; }
             public Rectangle NewAlien { get; set; }

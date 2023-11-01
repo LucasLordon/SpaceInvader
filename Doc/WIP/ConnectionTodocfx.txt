@@ -1,0 +1,8 @@
+https://dotnet.github.io/docfx/index.html
+
+faire cette commande :
+docfx docfx_project/docfx.json --serve
+
+depuis un cmd ouvert sur ce fichier :
+
+C:\Users\pu61qgw\Documents\GitHub\SpaceInvader
