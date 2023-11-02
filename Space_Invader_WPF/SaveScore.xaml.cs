@@ -16,6 +16,9 @@ using MySql.Data.MySqlClient; //Dans le cas d'une erreur désinstallée le packa
 
 namespace Space_Invader_WPF
 {
+    /// <summary>
+    /// Logique d'interaction pour SaveScore.xaml
+    /// </summary>
     public partial class SaveScore : Window
     {
         public int score;
