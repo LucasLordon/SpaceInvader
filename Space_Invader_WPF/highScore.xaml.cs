@@ -46,11 +46,11 @@ namespace Space_Invader_WPF
             List<ScoreData> topPlayers = new List<ScoreData>();
 
             string connectionstring = "server=localhost; uid=root; pwd=root; database=db_space_invaders; port=6033;";
-            using (MySqlConnection con = new MySqlConnection(connectionstring))
+            using (MySqlConnection connection = new MySqlConnection(connectionstring))
             {
-                con.Open();
-                string sql = "SELECT jouPseudo, jouNombrePoints FROM db_space_invaders.t_joueur ORDER BY jouNombrePoints DESC LIMIT 10";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
+                connection.Open();
+                string query = "SELECT jouPseudo, jouNombrePoints FROM db_space_invaders.t_joueur ORDER BY jouNombrePoints DESC LIMIT 10";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {

@@ -39,10 +39,10 @@ namespace Space_Invader_WPF
 
         private void btnSaveScore_Click(object sender, RoutedEventArgs e)
         {
-            SaveScore objMainWindow = new SaveScore();
+            SaveScore saveScoreWindow = new SaveScore();
             this.Visibility = Visibility.Hidden;
-            objMainWindow.Show();
-            objMainWindow.score = score;
+            saveScoreWindow.Show();
+            saveScoreWindow.score = score;
         }
     }
 }
