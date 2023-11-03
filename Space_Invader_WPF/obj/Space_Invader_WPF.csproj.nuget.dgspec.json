@@ -1,42 +1,50 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {}
+    "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj": {
+    "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
         "frameworks": {
           "net472": {
             "projectReferences": {}
           }
-        }
+        },
+        "packagesConfigPath": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\packages.config"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {
+    "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
         "projectName": "Space_Invader_WPF",
-        "projectPath": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
-        "packagesPath": "C:\\Users\\pu61qgw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\Space_Invader_WPF.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Space_Invader_WPF\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\pu61qgw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -46,8 +54,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\pu61qgw\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj"
+              "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj"
               }
             }
           }
@@ -73,7 +81,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -85,7 +94,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
