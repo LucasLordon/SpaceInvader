@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Space_Invader_WPF", "Space_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{F3EEC4E6-4C57-4CD2-AD84-2A8F940DB57E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTests", "..\ModelTests\ModelTests.csproj", "{BC56C7DE-0FB7-42AD-AAC8-FB1045EEF00E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F3EEC4E6-4C57-4CD2-AD84-2A8F940DB57E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3EEC4E6-4C57-4CD2-AD84-2A8F940DB57E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3EEC4E6-4C57-4CD2-AD84-2A8F940DB57E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC56C7DE-0FB7-42AD-AAC8-FB1045EEF00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC56C7DE-0FB7-42AD-AAC8-FB1045EEF00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC56C7DE-0FB7-42AD-AAC8-FB1045EEF00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC56C7DE-0FB7-42AD-AAC8-FB1045EEF00E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

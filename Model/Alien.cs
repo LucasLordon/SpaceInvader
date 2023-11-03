@@ -45,7 +45,7 @@ namespace Model
         public void move(int maxWidth)
         {
             // Vérifie si la position X actuelle de l'alien est plus grande que la somme de sa largeur et de la largeur maximale de l'écran (cela permet de verifier si l'alien déplace l'écran sur la droite)
-            if (this.posX > this.width + maxWidth)
+            if (this.posX >= this.width + maxWidth)
             {
                 //La nouvelle position est égal à : (- la largeur de l'alien - l'espace entre les alien) + (le décalage que l'alien à sur la droite de l'écran)    Cela permet déviter d'empiler les alien lors de l'accélération de la vitesse des alien.
                 this.posX = (-this.width - 10) + (this.posX - (this.width + maxWidth));
