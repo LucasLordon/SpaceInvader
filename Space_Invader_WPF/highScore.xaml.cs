@@ -20,6 +20,9 @@ namespace Space_Invader_WPF
     /// </summary>
     public partial class highScore : Window
     {
+        /// <summary>
+        /// Constructeur de la classe highScore, initialise la fenêtre.
+        /// </summary>
         public highScore()
         {
             InitializeComponent();
@@ -39,8 +42,9 @@ namespace Space_Invader_WPF
             this.Visibility = Visibility.Hidden;
             objMainWindow.Show();
         }
-
-        // Classe pour stocker les données des scores.
+        /// <summary>
+        /// Classe pour stocker les données des scores.
+        /// </summary>
         public class ScoreData
         {
             public int Place { get; set; }
@@ -48,7 +52,10 @@ namespace Space_Invader_WPF
             public int Score { get; set; }
         }
 
-        // Récupère les 10 meilleurs scores à partir de la base de données.
+        /// <summary>
+        /// Récupère les 10 meilleurs scores à partir de la base de données.
+        /// </summary>
+        /// <returns>Retourne la liste topPlayer remplie</returns>
         public List<ScoreData> GetTop10Players()
         {
             List<ScoreData> topPlayers = new List<ScoreData>();
@@ -80,7 +87,10 @@ namespace Space_Invader_WPF
             return topPlayers;
         }
 
-        // Met à jour les étiquettes de la fenêtre avec les données des 10 meilleurs scores.
+        /// <summary>
+        /// Met à jour les étiquettes de la fenêtre avec les données des 10 meilleurs scores.
+        /// </summary>
+        /// <param name="topPlayers">List contenant les information des 10 meilleur joueur (rang,pseudo,score)</param>
         private void UpdateLabels(List<ScoreData> topPlayers)
         {
             if (topPlayers.Count >= 10)

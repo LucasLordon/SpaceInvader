@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+    /// <summary>
+    /// Classe Bullet
+    /// </summary>
     public class Bullet
     {
         // Déclaration des attributs de la classe Bullet
@@ -54,7 +57,7 @@ namespace Model
         /// <summary>
         ///  Méthode pour déplacer la balle vers le haut
         /// </summary>
-        /// <param name="TOPLIMIT"></param>
+        /// <param name="TOPLIMIT">Limit entre l'espace de jeu et les texte d'informatioon tels que le score</param>
         public void MoveUp(int TOPLIMIT)
         {
             this.posY -= this.speed;
@@ -64,7 +67,10 @@ namespace Model
             }
         }
 
-        // Méthode pour déplacer la balle vers le bas
+        /// <summary>
+        /// Méthode pour déplacer la balle vers le bas
+        /// </summary>
+        /// <param name="WINDOWSHEIGHT">Taille de l'écran de jeu</param>
         public void MoveDown(int WINDOWSHEIGHT)
         {
             this.posY += this.speed;

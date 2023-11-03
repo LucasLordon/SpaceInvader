@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+    /// <summary>
+    /// Classe Alien
+    /// </summary>
     public class Alien
     {
         // Déclaration des attributs de la classe Alien
@@ -16,7 +19,15 @@ namespace Model
         public int speed;         // Vitesse de déplacement de l'alien (distance parcouru à chaque déplacement)
         public string ImageLink;  // Lien vers l' image associée à l'alien (le lien pars du bin)
 
-        // Constructeur de la classe Alien
+        /// <summary>
+        /// Constructeur de la classe Alien
+        /// </summary>
+        /// <param name="posX">Position en X de l'alien (coin supérieur gauche)</param>
+        /// <param name="posY">Position en Y de l'alien (coin supérieur gauche)</param>
+        /// <param name="ImageLink">Lien vers l' image associée à l'alien (le lien pars du bin)</param>
+        /// <param name="width">Largeur de l'alien (rectangle, vers la droite de posY)</param>
+        /// <param name="height">Hauteur de l'alien (rectangle, vers le bas de posX)</param>
+        /// <param name="speed">Vitesse de déplacement de l'alien (distance parcouru à chaque déplacement)</param>
         public Alien(int posX, int posY, string ImageLink, int width, int height, int speed)
         {
             // Initialisation des attributs avec les valeurs passées en paramètres
@@ -27,7 +38,10 @@ namespace Model
             this.height = height;
             this.speed = speed;
         }
-        // Méthode pour déplacer l'alien
+        /// <summary>
+        /// Méthode pour déplacer l'alien
+        /// </summary>
+        /// <param name="maxWidth">Largeur de l'écran de jeu</param>
         public void move(int maxWidth)
         {
             // Vérifie si la position X actuelle de l'alien est plus grande que la somme de sa largeur et de la largeur maximale de l'écran (cela permet de verifier si l'alien déplace l'écran sur la droite)

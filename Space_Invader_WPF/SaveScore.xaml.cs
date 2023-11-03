@@ -21,8 +21,12 @@ namespace Space_Invader_WPF
     /// </summary>
     public partial class SaveScore : Window
     {
-        public int score;
 
+        public int score; //variable publique de type entier ayant pour valeur le score (la variable recoit la valeur du score lors de l'appuie du bouton SaveScore de la page GameOver)
+
+        /// <summary>
+        /// Constructeur de la classe SaveScore, initialise la fenêtre.
+        /// </summary>
         public SaveScore()
         {
             InitializeComponent();
@@ -32,6 +36,11 @@ namespace Space_Invader_WPF
 
         private bool isQueryExecuted = false; //Variable servant à empêcher d'enregistrer plusieurs fois le même score
 
+        /// <summary>
+        /// Gère le clic sur le bouton "Sauvegarder". Cette fonction permet d'ajouter le pseudo du joueur et son score à la base de données MySQL.
+        /// </summary>
+        /// <param name="sender">L'objet déclencheur de l'événement (le bouton).</param>
+        /// <param name="e">Les données de l'événement de clic.</param>
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
 
@@ -92,7 +101,11 @@ namespace Space_Invader_WPF
                 MessageBox.Show("La requête a déjà été exécutée.");
             }
         }
-
+        /// <summary>
+        /// Gère le clic sur le bouton "Menu". Cette fonction crée une instance de la classe PlayMenu et affiche le menu principal en cachant la fenêtre actuelle.
+        /// </summary>
+        /// <param name="sender">L'objet déclencheur de l'événement (le bouton).</param>
+        /// <param name="e">Les données de l'événement de clic.</param>
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
             // Crée une instance de la classe PlayMenu et affiche le menu principal
