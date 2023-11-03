@@ -9,22 +9,11 @@
         "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj",
         "projectName": "Model",
         "projectPath": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
         "frameworks": {
           "net472": {
             "projectReferences": {}
           }
-        },
-        "packagesConfigPath": "C:\\Users\\lucas\\OneDrive\\Documents\\GitHub\\SpaceInvader\\Model\\packages.config"
+        }
       },
       "frameworks": {
         "net472": {}
